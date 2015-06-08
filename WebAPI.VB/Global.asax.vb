@@ -12,10 +12,7 @@ Public Class WebApiApplication
         Dim config As HttpConfiguration = GlobalConfiguration.Configuration
 
         AutofacConfig.Register(config)
-        AreaRegistration.RegisterAllAreas()
         WebApiConfig.Register(config)
-        FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters)
-        RouteConfig.RegisterRoutes(RouteTable.Routes)
         BundleConfig.RegisterBundles(BundleTable.Bundles)
     End Sub
 End Class
