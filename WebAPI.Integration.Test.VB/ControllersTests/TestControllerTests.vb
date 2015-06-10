@@ -2,7 +2,6 @@
 Imports System.Net
 Imports Newtonsoft.Json
 Imports WebAPI.VB.Models
-Imports WebAPI.Integration.Test.VB.Helpers
 Imports NUnit.Framework
 
 Namespace ControllersTests
@@ -22,13 +21,6 @@ Namespace ControllersTests
             Assert.NotNull(values)
             Assert.IsTrue(values.Count = 2)
             
-        End Sub
-
-        <Test()>
-        Public Sub GetValuesNegativeTest()
-
-            Assert.IsTrue(Not (String.IsNullOrEmpty(Config.ApiHostUrl)))
-
         End Sub
 
     End Class

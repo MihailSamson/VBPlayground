@@ -92,7 +92,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControllersTests\PingControllerTests.vb" />
     <Compile Include="ControllersTests\TestControllerTests.vb" />
+    <Compile Include="ControllersTests\ValueControllerTests.vb" />
     <Compile Include="Helpers\ApiClient.vb" />
     <Compile Include="Helpers\Config.vb" />
     <Compile Include="IntegrationTestBase.vb" />

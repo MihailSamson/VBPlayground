@@ -8,12 +8,13 @@ Namespace Controllers
 
         Private ReadOnly _testService As ITestService
 
+        ' autofac usage example
         Sub New(ByVal testService As ITestService)
             _testService = testService
         End Sub
 
 
-        ' GET api/test/values
+        ' GET api/test
         Public Function GetValues() As List(Of TestClass)
 
             Dim list As New List(Of TestClass)

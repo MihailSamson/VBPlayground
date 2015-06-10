@@ -1,30 +1,25 @@
 ﻿Imports System.Web.Http
 
-Public Class ValuesController
-    Inherits ApiController
+Namespace Controllers
 
-    ' GET api/values
-    Public Function GetValues() As IEnumerable(Of String)
-        Return New String() { "value1", "value2" }
-    End Function
+    Public Class ValuesController
+        Inherits ApiController
 
-    ' GET api/values/5
-    Public Function GetValue(ByVal id As Integer) As String
-        Return "value"
-    End Function
+        ' GET api/values
+        Public Function GetValues() As IEnumerable(Of String)
+            Return New String() {"value1", "value2"}
+        End Function
 
-    ' POST api/values
-    Public Sub PostValue(<FromBody()> ByVal value As String)
+        ' GET api/values/5
+        Public Function GetValue(ByVal id As Integer) As String
+            Return "value"
+        End Function
 
-    End Sub
+        ' POST api/values
+        Public Function PostValue(<FromBody()> ByVal value As String) As Integer
+            ' process request, return Id
+            Return 1
+        End Function
 
-    ' PUT api/values/5
-    Public Sub PutValue(ByVal id As Integer, <FromBody()> ByVal value As String)
-
-    End Sub
-
-    ' DELETE api/values/5
-    Public Sub DeleteValue(ByVal id As Integer)
-
-    End Sub
-End Class
+    End Class
+End Namespace
