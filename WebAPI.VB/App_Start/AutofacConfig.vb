@@ -9,7 +9,7 @@ Namespace App_Start
 
     Public Class AutofacConfig
 
-        Public Shared Function Register(ByRef configuration As HttpConfiguration)
+        Public Shared Sub Register(ByRef configuration As HttpConfiguration)
 
             Dim containerBuilder As New ContainerBuilder()
             containerBuilder.RegisterApiControllers(Assembly.GetExecutingAssembly())
@@ -19,9 +19,9 @@ Namespace App_Start
             Dim container As Container = containerBuilder.Build()
             Dim resolver As New AutofacWebApiDependencyResolver(container)
 
-            GlobalConfiguration.Configuration.DependencyResolver = resolver
+            configuration.DependencyResolver = resolver
 
-        End Function
+        End Sub
 
     End Class
 End Namespace
